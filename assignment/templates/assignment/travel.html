@@ -1,18 +1,22 @@
 {% extends "base.html" %}
 
+{% load static %}
 
 {% block content %}
-<img src="內容被換掉" class="card-img-top" alt="內容被換掉">
+<img id="text" src="內容被換掉" class="card-img-top" alt="內容被換掉">
 
 <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">內容被換掉
-    </p>
+    <h5 id="stitle" class="card-title">內容被換掉</h5>
+    <p id="xbody" class="card-text">內容被換掉</p>
 </div>
 <div class="card-footer">
-    <small class="text-body-secondary">內容被換掉</small>
+    <small id="xpostDate" class="text-body-secondary">內容被換掉</small>
 </div>
 {% endblock %}
 
 {% block scripts %}
+<script src="{% static 'scripts/travel.js' %}"></script>
+<script>
+    console.log(spots.CommonFormat.Section);
+</script>
 {% endblock %}
