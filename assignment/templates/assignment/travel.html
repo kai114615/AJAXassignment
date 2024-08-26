@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block content %}
-<img id="text" src="內容被換掉" class="card-img-top" alt="內容被換掉">
+<img id="text" src="" class="card-img-top" alt="內容被換掉">
 
 <div class="card-body">
     <h5 id="stitle" class="card-title">內容被換掉</h5>
@@ -15,7 +15,7 @@
 {% endblock %}
 
 {% block scripts %}
-<script src="{% static 'scripts/travel.js' %}"></script>
+<script src="{% static '/scripts/travel.js' %}"></script>
 <script>
     console.log(spots.CommonFormat.Section);
 </script>
