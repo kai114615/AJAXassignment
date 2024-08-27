@@ -21,14 +21,16 @@
         <div class="card-body">
           <h5 class="card-title">{% block title2 %}{% endblock %}</h5>
           <p class="card-text">{% block text %}{% endblock %}</p>
-          <a href="#" class="btn btn-primary">{% block href %}{% endblock %}</a>
+          <!-- <a href="#" class="btn btn-primary">{% block href %}{% endblock %}</a> -->
         </div>
       </div>
     </div>
   </div>
 
 
+  {% block scripts %}
 
+  {% endblock %}
 
 </body>
 </html>

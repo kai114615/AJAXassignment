@@ -13,8 +13,31 @@ ToDoList 願望清單
 {% endblock %}
 
 {% block text %}
-<input id="inputWhatYouWant" type="text" placeholder="想要做什麼呢?">
-<button id="submit" type="submit">送出</button>
+<form action="">
+    <input id="inputWhatYouWant" type="text" placeholder="想要做什麼呢?">
+    <input type="submit" value="送出"></td>
+</form>
+
+<table id="tb1" class="table table-hover">
+    <thead>
+        <tr>
+            <th>狀態</th>
+            <th>待做事項</th>
+            <th>編輯</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <span><input type="checkbox" name="4444" id="select" class="form-check-input"></span>
+                <span id="ShowStatus">未完成</span>
+            </td>
+
+            <td>學習 Python</td>
+            <td><input type="button" class="btn btn-danger" value="刪除"></td>
+        </tr>
+    </tbody>
+</table>
 {% endblock %}
 
 
@@ -22,6 +45,15 @@ ToDoList 願望清單
 4444
 {% endblock %}
 
-{% block scripts %}
 
+
+{% block scripts %}
+<script>
+    const select1 = document.getElementById("select");
+    const ShowStatus = document.getElementById("ShowStatus");
+    select1.addEventListener("click", () => {
+        ShowStatus.textContent = "已完成"
+        console.log(ShowStatus)
+    });
+</script>
 {% endblock %}
