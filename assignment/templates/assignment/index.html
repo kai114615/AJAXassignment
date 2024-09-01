@@ -2,7 +2,21 @@
 
 {% load static %}
 
-{% block content %}
+{% block header %}
+Django assignment
+{% endblock %}
+
+{% block title2 %}
+作業分頁連結
+{% endblock %}
+
+{% block text %}
+<div>
+    <ul>
+        <li><a aria-current="page" href="./todolist/">ToDoList</a></li>
+        <li><a aria-current="page" href="./travel/">Travel</a></li>
+    </ul>
+</div>
 
 {% endblock %}
 

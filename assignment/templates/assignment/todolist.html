@@ -13,9 +13,13 @@ ToDoList 願望清單
 {% endblock %}
 
 {% block text %}
-<form action="">
-    <input id="inputWhatYouWant" type="text" placeholder="想要做什麼呢?">
-    <input type="submit" value="送出"></td>
+<form method="POST" action="">
+    {% csrf_token %}
+    <div>
+        <input name="inputWhatYouDo" type="text" placeholder="想要做什麼呢?"/>
+        <!-- <input type="submit" value="送出"> -->
+        <button type="submit">送出</button>
+    </div>
 </form>
 
 <table id="tb1" class="table table-hover">
@@ -36,6 +40,11 @@ ToDoList 願望清單
             <td>學習 Python</td>
             <td><input type="button" class="btn btn-danger" value="刪除"></td>
         </tr>
+        {% for item in list %}
+        <tr>
+            <td>{{item.todo}}</td>
+        </tr>
+        {% endfor %}
     </tbody>
 </table>
 {% endblock %}
