@@ -13,7 +13,7 @@ ToDoList 願望清單
 {% endblock %}
 
 {% block text %}
-<form method="POST" action="">
+<form method="POST" action="{% url 'assignment:create' %}">
     {% csrf_token %}
     <div>
         <input name="inputWhatYouDo" type="text" placeholder="想要做什麼呢?"/>
@@ -42,7 +42,18 @@ ToDoList 願望清單
         </tr>
         {% for item in list %}
         <tr>
+            <td>
+                <span><input type="checkbox" name="4444" id="select" class="form-check-input"></span>
+                <span id="ShowStatus">
+                {% if item.completed == 1 %}
+                    完成
+                {% else %}
+                    未完成
+                {% endif %}
+                </span>
+            </td>
             <td>{{item.todo}}</td>
+            <td><input type="button" class="btn btn-danger" value="刪除"></td>
         </tr>
         {% endfor %}
     </tbody>

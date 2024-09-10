@@ -4,7 +4,7 @@ from datetime import datetime
 # Create your models here.
 class Todo(models.Model):
     todo_id = models.AutoField(primary_key=True)
-    completed = models.BooleanField()
+    completed = models.BooleanField(default=0)
     todo =  models.CharField(max_length=100)
     last_uplate = models.DateTimeField(default=datetime.now())
 

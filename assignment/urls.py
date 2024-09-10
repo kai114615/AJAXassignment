@@ -23,6 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('travel/', views.travel, name='travel'),
     path('', views.index, name='index'),
-    # path('create/', views.create, name='todolist'),
+    path('create/', views.create, name='create'),
     path('todolist/', views.todolist, name='todolist')
 ]

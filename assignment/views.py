@@ -18,9 +18,10 @@ def todolist(request):
 
 def create(request):
     if request.method == 'POST':
+        # print("測試")
         WhatYouDo = request.POST.get('inputWhatYouDo')
         # 新增資料
         Todo.objects.create(
             todo = WhatYouDo
         )
-        return redirect('assignment:index')  # 完成新增後將重新刷新todolist頁面
+        return redirect('assignment:todolist')  # 完成新增後將重新刷新todolist頁面
